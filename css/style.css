@@ -35,12 +35,22 @@ body {
   font-size: 0.95rem;
   letter-spacing: 0.0625em;
 }
-
+.navbar-light .navbar-nav .show>.nav-link,
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .nav-link.active:hover {
+  color: #ffc000;
+}
 .navbar-light .navbar-brand img {
   height: 1.5rem;
 }
 
 /* end modifcation bootstrap nav */
+/* navigation */
+.navbar-nav a {
+  color: rgb(44, 42, 42);
+}
+/* start */
 .bg-image {
   background-image: url(../image/header-bg.jpg);
   padding-top: 18rem;
@@ -189,10 +199,15 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50% , -50%);
+  color: white;
 
 }
 .image-hover:hover .bg-hover {
 opacity: 1;
+}
+
+.bg-image2 {
+
 }
 
 /* section4 */
@@ -413,29 +428,13 @@ h3 {
   margin-bottom: 4rem;
 }
 
-form div input {
-  padding: 10px 0;
-  border-radius: 5px;
-  border: none;
-  margin-bottom: 15px;
-  font-size: 20px;
+form {
+  color: white;
+  flex-grow: .5;
+  margin: auto;
 }
-
-.massege textarea {
-  padding: 0 0 0 10px;
-  box-sizing: border-box;
-  border: none;
-  border-radius: 20px;
-
-}
-.section7 button {
-  padding: 10px 50;
-  background-color: #ffc000;
-  border: none;
-  border-radius: 5px;
-  text-align: center;
-  margin-top: 50px;
-  color: #fff;
+.color {
+  color: white;
 }
 /* footer */
 .h6-icone-p {
@@ -584,6 +583,13 @@ padding: 30px 0;
 
 /* media 425 */
 @media only screen and (max-width:425px) {
+  .bg-image h2 {
+    font-size: 1.5rem;
+}
+.bg-image p {
+  font-size: 1.8rem;
+}
+
   .line-y {
     left: 20%;
   }
@@ -676,6 +682,9 @@ padding: 30px 0;
   .section6 img {
     width: 80%;
     margin: auto;
+  }
+  .h6-icone-p h6 {
+    font-size: 14px;
   }
 
 }

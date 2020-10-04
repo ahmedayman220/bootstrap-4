@@ -24,15 +24,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css.map">
     <!-- font-awesome -->
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- css -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/mobile-style.css">
     <!-- العنوان  -->
-    <title></title>
+    <title>Start Bootstrap</title>
 </head>
 <!-- start body  -->
 
@@ -66,7 +64,7 @@
         <section class="section1">
             <div class="header">
                 <div class="bg-image">
-                    <div class="container d-sm-block d-none">
+                    <div class="container">
                         <h2>Welcome To Our Studio!</h2>
                         <p>IT'S NICE TO MEET YOU</p>
                         <a href="#">Tell Me more</a>
@@ -305,19 +303,89 @@
                     <h3 class="text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
                 <div class="form-massege d-md-flex col-md-12">
-                    <form class="col-md-12 ">
-                        <div class="form1 col-md-6 col-sm-12  m-auto">
-                            <input type="text" placeholder="Name" class="col-md-12 col-sm-12">
+                    <!-- orm bootstrap -->
+                    <form class="needs-validation" novalidate>
+                        <div class="form-row">
+                          <div class="col-md-6 mb-3">
+                            <label for="validationCustom01">First name</label>
+                            <input type="text" class="form-control" id="validationCustom01" placeholder="Name..." required>
+                            <div class="valid-feedback">
+                              Looks good!
+                            </div>
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <label for="validationCustom02">Last name</label>
+                            <input type="text" class="form-control" id="validationCustom02" placeholder="Frist Name..." required>
+                            <div class="valid-feedback">
+                              Looks good!
+                            </div>
+                          </div>
                         </div>
-                        <div class="form1 col-md-6 col-sm-12  m-auto">
-                            <input type="text" placeholder="Name" class="col-md-12 col-sm-12">
+                        <div class="form-row">
+                          <div class="col-md-6 mb-3">
+                            <label for="validationCustom03">City</label>
+                            <input type="text" class="form-control" id="validationCustom03" required>
+                            <div class="invalid-feedback">
+                              Please provide a valid city.
+                            </div>
+                          </div>
+                          <div class="col-md-3 mb-3">
+                            <label for="validationCustom04">State</label>
+                            <select class="custom-select" id="validationCustom04" required>
+                              <option selected disabled value="">Choose...</option>
+                              <option></option>
+                              <option>...</option>
+                              <option>...</option>
+                              <option>...</option>
+                              <option>...</option>
+                            </select>
+                            <div class="invalid-feedback">
+                              Please select a valid state.
+                            </div>
+                          </div>
+                          <div class="col-md-3 mb-3">
+                            <label for="validationCustom05">Zip</label>
+                            <input type="text" class="form-control" id="validationCustom05" required>
+                            <div class="invalid-feedback">
+                              Please provide a valid zip.
+                            </div>
+                          </div>
                         </div>
-                        <div class="form1 col-md-6 col-sm-12  m-auto">
-                            <input type="text" placeholder="Name" class="col-md-12 col-sm-12">
+                        <div class="form-group">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">
+                              Agree to terms and conditions
+                            </label>
+                            <div class="invalid-feedback">
+                              You must agree before submitting.
+                            </div>
+                          </div>
                         </div>
-                    </form>
+                        <button class="btn btn-primary color" type="submit">Submit form</button>
+                      </form>
+                      
+                      <script>
+                      // Example starter JavaScript for disabling form submissions if there are invalid fields
+                      (function() {
+                        'use strict';
+                        window.addEventListener('load', function() {
+                          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                          var forms = document.getElementsByClassName('needs-validation');
+                          // Loop over them and prevent submission
+                          var validation = Array.prototype.filter.call(forms, function(form) {
+                            form.addEventListener('submit', function(event) {
+                              if (form.checkValidity() === false) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                              }
+                              form.classList.add('was-validated');
+                            }, false);
+                          });
+                        }, false);
+                      })();
+                      </script>
                 </div>
-                <div class="text-center"><button>SEND MASSEGE</button></div>
             </div>
         </section>
     </main>
@@ -329,7 +397,7 @@
                 <i class="fab fa-facebook-f ml-3 mr-3"></i>
                 <i class="fab fa-linkedin-in"></i>
                 <div class="a">
-                    <a href="#">Privacy Policy</a>
+                    <a href="#" class="mr-2">Privacy Policy</a>
                     <a href="#">Terms of Use</a>
                 </div>
             </div>
